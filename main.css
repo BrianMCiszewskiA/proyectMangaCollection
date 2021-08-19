@@ -1,0 +1,53 @@
+div.mangaDisplay{
+	display:  grid;
+	overflow: auto;
+	white-space: nowrap;
+}
+img{
+	display:  inline-block;
+}
+button{
+	margin: 2px;
+}
+
+.mangaNameBox{
+	display: flex;
+	justify-content: space-between;
+	margin-right: 50%;
+	box-shadow: 5px 5px 5px lightgray;
+}
+.mangaNameBoxOpen{
+	display: flex;
+	justify-content: space-between;
+	margin-right: 50%;
+}
+h2{
+	margin: 0px;
+}
+div.mangaPrimaryBox{
+	margin: 10px;
+}
+img{
+	min-width: 200px;
+	margin-right: 1px;
+}
+
+.img__description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap:hover .img__description {
+  visibility: visible;
+  opacity: 1;
+}
