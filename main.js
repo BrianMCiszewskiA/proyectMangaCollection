@@ -1,6 +1,9 @@
 function createDivs(){
 	for(i=0; i<mangaCollection.length; i++){
-		createDiv(mangaCollection[i]);
+		id = document.getElementById(mangaCollection[i][0].sFile+"main");
+		if(!id){
+			createDiv(mangaCollection[i]);
+		}
 	}
 }
 
@@ -67,13 +70,16 @@ function createMangaImages(mangas, where){
 function showHideBox(box){
 	button = document.getElementById(box.id + "button");
 	boxName = document.getElementById(box.id + "name");
+	boxMain = document.getElementById(box.id + "main");
 	if(box.style.display == "block"){
 		box.style.display = "none";
 		boxName.setAttribute("class", "mangaNameBox");
+		boxMain.setAttribute("class", "mangaPrimaryBox");
 		button.replaceChild(document.createTextNode("Show"), button.childNodes[0]);
 	} else {
 		box.style.display = "block";
 		boxName.setAttribute("class", "mangaNameBoxOpen");
+		boxMain.setAttribute("class", "mangaMainOpen");
 		button.replaceChild(document.createTextNode("Hide"), button.childNodes[0]);
 	}
 }

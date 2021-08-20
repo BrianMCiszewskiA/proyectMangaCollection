@@ -8,14 +8,38 @@
 	<script type="text/javascript" src="mangaClass.js"></script>
 	<script type="text/javascript" src="createCollection.js"></script>
 	<script type="text/javascript" src="mangaCollection.js"></script>
+	<script type="text/javascript" src="addCollection.js"></script>
 </head>
 <body>
 	<header>
 		<input type="text" id="searchBar" onkeyup="search()" placeholder="filtrar colecciones...">
+		<button onclick="showAddDiv()">Agregar Coleccion</button>
 	</header>
+	<div id="addMenuModal">
+		<div id="addMenuContent">
+			<span id="closeButton" onclick="closeAddDiv()">&times;</span>
+			<div id="addMenu">
+				<input type="text" name="seriesName" id="seriesName" placeholder="Nombre de la serie">
+				<input type="number" name="cantVol" id="cantVol" placeholder="Cantidad de tomos">
+				<input type="text" name="tomoObtenido" id="tomoObtenido" placeholder="Numeros de Tomos obtenidos separados por comas">
+				<button onclick="createNewCollection()">Agregar a Coleccion</button>
+			</div>
+			<div id= "newCollectionsPreview"></div>
+			<div id= "addMenuButtons">
+				<button onclick="copyNewCollections()">Copiar</button>
+				<button onclick="updateWithNewCollections()">Agregar</button>
+			</div>
+		</div>
+	</div>
 	<div id="main"></div>
 </body>
 <script type="text/javascript">
 	createDivs();
+	var modal = document.getElementById("addMenuModal");
+	window.onclick = function(event) {
+  	if (event.target == modal) {
+  	  closeAddDiv();
+  	}
+}
 </script>
 </html>

@@ -1,6 +1,9 @@
 function createCollection(series, cantVol, where, volHave, sFile){
 	for(i=1; i<=cantVol; i++){
 		name = series + " " + i
+		if(!sFile){
+			sFile = sinCaracteresEspeciales(series);
+		}
 		file = lowKeySnake(sFile);
 		imgName = file + "_"+ i +".jpg";
 		if(cantVol == 1){
@@ -16,4 +19,10 @@ function lowKeySnake(string){
 	a = a.toLowerCase();
 	a = replaceSpace(a);
 	return a;
+}
+function sinCaracteresEspeciales(s){
+	string = s +"";
+	console.log(s);
+	console.log(string);
+	return string.replace(/[^a-zA-Z0-9]/g, '');
 }
