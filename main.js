@@ -84,9 +84,6 @@ function showHideBox(box){
 	}
 }
 
-function replaceSpace(string){
-	return string.replaceAll(" ", "_");
-}
 function reSpace(string){
 	return string.replaceAll("_", " ")
 }

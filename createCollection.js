@@ -22,7 +22,9 @@ function lowKeySnake(string){
 }
 function sinCaracteresEspeciales(s){
 	string = s +"";
-	console.log(s);
-	console.log(string);
 	return string.replace(/[^a-zA-Z0-9]/g, '');
+}
+
+function replaceSpace(string){
+	return string.replaceAll(" ", "_");
 }
