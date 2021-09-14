@@ -50,3 +50,14 @@ function loadLastActivity(cant){
 		where.appendChild(getActivity(index));
 	}
 }
+
+function toTop(){
+	//closes side menu and then scrolls to top
+	closeNav("Left");
+	scrollToTop();
+}
+
+function scrollToTop() {
+	document.body.scrollTop = 0; // For Safari
+	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }

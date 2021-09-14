@@ -45,7 +45,7 @@ createCollection("Jujutsu Kaisen", 16, jujuKaisen, jujuKaisenHave, "Jujutsu_Kais
 
 //Komi san
 const komiSan = [];
-komiSanHave = [1];
+komiSanHave = [1,2];
 createCollection("Komi-san", 10, komiSan, komiSanHave, "Komi_San"); //10 en japon y se sigue publicando, aca llego 1
 
 //Konosuba

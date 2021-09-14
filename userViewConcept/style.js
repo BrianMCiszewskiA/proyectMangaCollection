@@ -1,10 +1,12 @@
-function openNav() {
-  document.getElementById("menuLeft").style.width = "250px";
+function openNav(dir) {
+  //dir debe ser Left o Right
+  document.getElementById("menu"+dir).style.width = "250px";
 }
 
 /* Set the width of the sidebar to 0 (hide it) */
-function closeNav() {
-  document.getElementById("menuLeft").style.width = "0";
+function closeNav(dir) {
+  //dir debe ser Left o Right
+  document.getElementById("menu"+dir).style.width = "0";
 }
 
 //slideshows

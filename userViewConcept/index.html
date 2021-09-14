@@ -16,18 +16,18 @@
 <body>
 	<header>
 		<div class="headerLeft">
-			<button class="openbtn" onclick="openNav()">&equiv;</button>
+			<button class="openbtn" onclick="openNav('Left')">&equiv;</button>
 			<input type="text" name="search" id="search" placeholder="Buscar coleccion...">
 		</div>
 		<div class="headerRight">
-			<button>User Profile</button>
-			<button>Options</button>
+			<button class="openbtn">&#128100;</button>
+			<button class="openbtn" onclick="openNav('Right')">&#9881;</button>
 		</div>
 	</header>
 	<div id="menuLeft" class="plegableIzq">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a>Inicio</a>
-		<a>Colecciones</a>
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav('Left')">&times;</a>
+		<a onclick="toTop()">Inicio</a>
+		<a href="../index.html">Colecciones</a>
 		<a>Etc...</a>
 	</div>
 	<section id="mainContent">
@@ -48,35 +48,36 @@
 			</div>
 			<div id="friendsActivity"></div>
 		</section>
-		<section id="sideContent" class="sideContent">
+		<div id="sideContent" class="sideContent">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-In facilisis nisl vitae odio aliquam, non cursus mi ornare.
-In varius erat vitae urna aliquam bibendum.
-Nunc non felis sollicitudin, ultricies ligula eget, sollicitudin libero.
-Pellentesque ultrices velit eu ligula iaculis, id luctus justo faucibus.
-Mauris vel dui sit amet est gravida viverra.
-Curabitur commodo quam vel justo sodales, et tempus lectus rhoncus.
-Donec elementum tortor vel arcu mollis venenatis.
-Cras euismod nisl et ante vulputate sollicitudin.
-Fusce cursus erat et mi posuere interdum sodales at tellus.
-Phasellus id neque volutpat, gravida est sit amet, ultrices tortor.
-Vivamus aliquet nunc nec risus vestibulum, quis interdum justo vestibulum.
-Nullam viverra nunc a nunc vestibulum, et sodales metus malesuada.
-Aliquam auctor metus non neque imperdiet congue.
-Etiam sit amet purus porta, ullamcorper lacus et, lacinia erat.
-Maecenas porta sem et lectus laoreet auctor.
-Curabitur commodo nibh eu accumsan pharetra.
-Donec vel ipsum eleifend, scelerisque ligula et, dignissim sem.
-Cras vitae diam ultrices, suscipit dui sagittis, ultrices dui.
-In ullamcorper nulla sit amet massa cursus accumsan.
-Quisque vestibulum sem a porta iaculis.
-Morbi non quam sed libero molestie scelerisque.
-Fusce molestie nisl eget iaculis dictum.</p>
-		</section>
+			In facilisis nisl vitae odio aliquam, non cursus mi ornare.
+			In varius erat vitae urna aliquam bibendum.
+			Nunc non felis sollicitudin, ultricies ligula eget, sollicitudin libero.
+			Pellentesque ultrices velit eu ligula iaculis, id luctus justo faucibus.
+			Mauris vel dui sit amet est gravida viverra.
+			Curabitur commodo quam vel justo sodales, et tempus lectus rhoncus.
+			Donec elementum tortor vel arcu mollis venenatis.
+			Cras euismod nisl et ante vulputate sollicitudin.
+			Fusce cursus erat et mi posuere interdum sodales at tellus.
+			Phasellus id neque volutpat, gravida est sit amet, ultrices tortor.
+			Vivamus aliquet nunc nec risus vestibulum, quis interdum justo vestibulum.
+			Nullam viverra nunc a nunc vestibulum, et sodales metus malesuada.
+			Aliquam auctor metus non neque imperdiet congue.
+			Etiam sit amet purus porta, ullamcorper lacus et, lacinia erat.
+			Maecenas porta sem et lectus laoreet auctor.
+			Curabitur commodo nibh eu accumsan pharetra.
+			Donec vel ipsum eleifend, scelerisque ligula et, dignissim sem.
+			Cras vitae diam ultrices, suscipit dui sagittis, ultrices dui.
+			In ullamcorper nulla sit amet massa cursus accumsan.
+			Quisque vestibulum sem a porta iaculis.
+			Morbi non quam sed libero molestie scelerisque.
+			Fusce molestie nisl eget iaculis dictum.</p>
+		</div>
 	</section>
-	<div id="optionsMenu" class="plegableDer">
-		<p>Opciones</p>
-		<p>Cerrar Sesion</p>
+	<div id="menuRight" class="plegableDer">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav('Right')">&times;</a>
+		<a>Opciones</a>
+		<a>Cerrar Sesion</a>
 	</div>
 </body>
 <script type="text/javascript">
@@ -86,5 +87,10 @@ Fusce molestie nisl eget iaculis dictum.</p>
 	createRandomPosts(15);
 	resetearIndexActual();
 	loadLastActivity(10);
+	onload=function()
+    {
+        //Cada 10 segundos cambia la slide
+        setInterval(plusSlides,10000,1);
+    }
 </script>
 </html>
