@@ -40,7 +40,7 @@ createCollection("Highschool of the Dead", 7, hotd, hotdHave, "Highschool_of_the
 //Jujutsu Kaisen
 const jujuCero = new Manga("Jujutsu Kaisen 0", "Jujutsu_Kaisen_0.jpg", 0, true, "Jujutsu Kaisen", "Jujutsu_Kaisen");
 const jujuKaisen = [jujuCero, ];
-jujuKaisenHave = [0,1,2,3,4,5,6,7,8,9,10];
+jujuKaisenHave = [0,1,2,3,4,5,6,7,8,9,10,11];
 createCollection("Jujutsu Kaisen", 16, jujuKaisen, jujuKaisenHave, "Jujutsu_Kaisen"); //Aca llego hasta el 10, y el tomo 0 q es un caso especial. sigue en emision y va por el 16
 
 //Komi san

@@ -49,13 +49,6 @@ header{
 }
 
 @media screen and (max-width: 600px) {
-    .plegableLeft, .plegableRight{
-        height: 100% !important;
-        align-items: center;
-    }
-    .sidepanelOpen{
-        width: 100% !important;
-    }
     .content{
         margin:0;
     }
@@ -65,9 +58,6 @@ header{
 }
 
 @media screen and (min-width: 601px){
-    .sidepanelOpen{
-        width: 250px !important;
-    }
     .img2, .img3{
         display: inline-block;
     }
