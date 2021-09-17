@@ -1,0 +1,64 @@
+/*sidepanel*/
+.plegableLeft, .plegableRight{
+    height: 250px; /* Specify a height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Stay on top */
+    top: 0;
+    background-color: #111;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+  }
+  .plegableLeft{
+    left: 0;
+  }
+  .plegableRight{
+    right: 0;
+  }
+
+  .plegableLeft a, .plegableRight a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .plegableRight a{
+    padding: 8px 32px 8px 8px !important; 
+  }
+  
+  .plegableLeft a:hover, .plegableRight a:hover{
+    color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .plegableRight .closebtn, .plegableLeft .closebtn{
+    position: absolute;
+    top: 0;
+    font-size: 36px;
+  }
+  .plegableLeft .closebtn {
+    right: 25px;
+    margin-left: 50px;
+  }
+  .plegableRight .closebtn {
+    left: 0;
+    margin-right: 50px;
+  }
+
+  
+  /* Style the button that is used to open the sidepanel */
+  .openbtn {
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #0040FF;
+    color: white;
+    padding: 2px 8px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #0033CC;
+  }
