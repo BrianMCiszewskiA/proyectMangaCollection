@@ -13,9 +13,8 @@ function closeAddDiv(){
 function createNewCollection(){
 	series = document.getElementById("seriesName").value;
 	cantVol = document.getElementById("cantVol").value;
-	volHave = document.getElementById("tomoObtenido").value;
 	collection = [];
-	createCollection(series, cantVol, collection, toArray(volHave));
+	createCollection(series, cantVol, collection);
 	addCollectionPreview(collection);
 	newCollections.push(collection);
 }
@@ -40,7 +39,7 @@ function addCollectionPreview(collection){
 	div = document.createElement("div");
 	h = document.createElement("h3");
 	text = document.createTextNode(manga.series);
-	desc = document.createTextNode("Serie de " + collection.length + " tomo/s \n Obtenidos: " + completionOf(collection));
+	desc = document.createTextNode("Serie de " + collection.length + " tomo/s");
 	//config id
 	div.setAttribute("id", actualId);
 	actualId = actualId +1;
@@ -67,12 +66,10 @@ function copyNewCollections(){
 	for(i=0; i<newCollections.length; i++){
 		manga = newCollections[i][0];
 		mangaConstName = sinCaracteresEspeciales(lowKeySnake(manga.sFile));
-		mangaHaveNumList = newCollections[i].filter(manga=>manga.have).map(manga=>manga.vol);
 		text = document.createTextNode(
 			"//" + manga.name + "\n" +
 			"const " + mangaConstName + " = []; \n" +
-			"const " + mangaConstName + "Have =[" + mangaHaveNumList + "]; \n" + 
-			"createCollection('" + manga.series + "', " + newCollections[i].length + ", " + mangaConstName + ", " + mangaConstName + "Have, '" + manga.sFile + "'); \n \n"
+			"createCollection('" + manga.series + "', " + newCollections[i].length + ", " + mangaConstName + ", " + manga.sFile + "'); \n \n"
 			)
 		box.appendChild(text);
 	}
@@ -90,7 +87,6 @@ function resetAddDiv(){
 
 	document.getElementById("seriesName").value = "";
 	document.getElementById("cantVol").value = "";
-	document.getElementById("tomoObtenido").value = "";
 
 	eliminarElemento("copyText");
 }

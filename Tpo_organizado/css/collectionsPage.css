@@ -1,0 +1,78 @@
+.mainMangas{
+    position: relative;
+    top: 49px;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.collectionDiv{
+    margin: 0 25px;
+    justify-content: center;
+}
+.collectionDiv h2{
+    justify-self: center;
+}
+.mangaImage{
+    width: 10%;
+	max-height: 600px;
+	margin-right: 10px;
+}
+.mangaImageBox{
+    justify-self: center;
+    overflow: auto;
+    white-space: nowrap;
+}
+.mangaNameBox{
+    display: flex;
+    justify-content: space-between;
+}
+.oneShot{
+    display: flex !important;
+    justify-content: center !important;
+}
+@media screen and (max-width: 600px) {
+    .mainMangas{
+        width: 100%;
+        
+    }
+    .mangaImage{
+        min-width: 10%;
+        width: 90%;
+        max-width: max-content;
+        max-height: auto;
+    }
+}
+
+@media screen and (min-width: 601px){
+    .mainMangas{
+        width:100%;
+    }
+    .mangaImage{
+        width: 25%;
+        height: auto;
+    }
+    .mangaImageBox{
+        height: max-content;
+    }
+    .smallerCollection{   
+        display: flex !important;
+        justify-content: center !important;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .mangaImage{
+        width: 10%;
+        height: auto;
+    }
+    .smallCollection{  
+        display: flex !important;
+        justify-content: center !important;
+    }
+}
+/**
+* min-width: 10%;
+        width: 90%;
+        max-width: max-content;
+        max-height: auto;
+*/

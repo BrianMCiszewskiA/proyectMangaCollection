@@ -17,6 +17,7 @@
 	<script type="text/javascript" src="js/manga/mangaClass.js"></script>
 	<script type="text/javascript" src="js/manga/mangaCollection.js"></script>
 	<script type="text/javascript" src="js/usuario/posts.js"></script>
+	<script type="text/javascript" src="js/noDb/collectionOfClass.js"></script>
 	<script type="text/javascript" src="js/noDb/noDb.js"></script>
 </head>
 <body>
@@ -82,18 +83,19 @@
 			Fusce molestie nisl eget iaculis dictum.</p>
         </div>
     </section>
+	
+	<script type="text/javascript">
+		generateLastThreeCollections();
+		var slideIndex = 1;
+		showSlides(slideIndex);
+		createRandomPosts(15);
+		resetearIndexActual();
+		loadLastActivity(10);
+		onload=function()
+		{
+			//Cada 10 segundos cambia la slide
+			setInterval(plusSlides,10000,1);
+		}
+	</script>
 </body>
-<script type="text/javascript">
-	generateLastThreeCollections();
-	var slideIndex = 1;
-	showSlides(slideIndex);
-	createRandomPosts(15);
-	resetearIndexActual();
-	loadLastActivity(10);
-	onload=function()
-    {
-        //Cada 10 segundos cambia la slide
-        setInterval(plusSlides,10000,1);
-    }
-</script>
 </html>
