@@ -14,6 +14,8 @@
 	<script type="text/javascript" src="js/manga/mangaCollection.js"></script>
 	<script type="text/javascript" src="js/collectionsPage/collectionsPage.js"></script>
 	<script type="text/javascript" src="js/style/sidepanel.js"></script>
+	<script type="text/javascript" src="js/utils/utils.js"></script>
+    <script type="text/javascript" src="js/collectionsPage/search.js"></script>
 </head>
 <body>
     <header>
@@ -27,7 +29,7 @@
     <div id="menuLeft" class="plegableLeft">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav('Left')">&times;</a>
         <a href="main.html">Inicio</a>
-        <a onclick="toTop()">Colecciones</a>
+        <a href="collections.html">Colecciones</a>
         <a>Etc...</a>
     </div>
     <div id="menuRight" class="plegableRight">
@@ -37,6 +39,7 @@
     </div>
     <div id="main" class="mainMangas">
         <div id="mangaDiv"></div>
+        <div id="mangaNavButtons"></div>
     </div>
 
     <script type="text/javascript">

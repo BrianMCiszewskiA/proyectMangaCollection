@@ -90,5 +90,26 @@ function mangaStatusText(mangas){
 }
 
 function createPageButtons(cant){
-    //pendiente
+    pageNumber = 1
+    for(i=0; i+cant<mangaCollection.length; i=i+cant){
+        createMangaNavButton(i, cant, pageNumber);
+        pageNumber++;
+    }
+    createMangaNavButton(i, cant, pageNumber);
+}
+
+function createMangaNavButton(inicio, cant, bNum){
+    button = document.createElement("span");
+    text = document.createTextNode(bNum);
+    button.appendChild(text);
+
+    button.setAttribute("class", "mangaNavButton");
+    button.setAttribute("onclick", "navMangaPage("+inicio +", "+ cant + ")");
+
+    document.getElementById("mangaNavButtons").appendChild(button);
+}
+
+function navMangaPage(index, cant){
+    clearElement("mangaDiv");
+    createMangaDivs(index, cant);
 }
