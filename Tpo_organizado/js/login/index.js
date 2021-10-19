@@ -1,6 +1,8 @@
 const usuarios = [new Usuario("test", "test@test.com", "asd")];
 
+
 function createNewUser(){
+    
     if(isValid()){
         checkUserAndCreateUser();
     }

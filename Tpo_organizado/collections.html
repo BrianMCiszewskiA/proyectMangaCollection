@@ -16,13 +16,15 @@
 	<script type="text/javascript" src="js/style/sidepanel.js"></script>
 	<script type="text/javascript" src="js/utils/utils.js"></script>
     <script type="text/javascript" src="js/collectionsPage/search.js"></script>
+    <script type="text/javascript" src="js/noDb/noDb.js"></script>
+    <script type="text/javascript" src="js/placeholder/placeholder.js"></script>
 </head>
 <body>
     <header>
         <button class="openbtn" onclick="openNav('Left')">&equiv;</button>
         <input type="search" id="searchBar" onkeyup="search()" placeholder="Buscar colecciones...">
         <div>
-            <button class="openbtn">&#128100;</button>
+            <button class="openbtn" onclick="irAPerfilDe(yo)">&#128100;</button>
             <button class="openbtn" onclick="openNav('Right')">&#9881;</button>
         </div>
     </header>
