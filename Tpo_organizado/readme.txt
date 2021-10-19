@@ -5,3 +5,7 @@ Este es un proyecto personal que modifique en base a lo requerido en el tpo, hay
  pero ya tenia todo armado asi cuando vi la clase, eventualmente lo reacomodare y los usare.
 
  Hay una "cuenta" hardcodeada, user test@test.com, pass: asd
+
+ Las imagenes de algunas colecciones no estan bien alineadas, pienso modificar despues el tamaño en si de las mismas
+  para que todas sean del mismo tamaño (al menos dentro de la misma serie), y hay otras que no tienen imagen en si, 
+  esto es porque estoy usando las imagenes de las portadas de aca, y muchas todavia no salieron (tendria q tmb impedir que el mensaje de imagen no encontrada, salga en consola)
