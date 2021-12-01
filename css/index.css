@@ -1,0 +1,79 @@
+header{
+	position: static !important;
+}
+
+#form{
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+#newUser input{
+    display: block;
+    max-width: min-content;
+}
+#newUser input[type=submit], #newUser input[type=reset]{
+    display:inline;
+    margin: 2px;
+}
+h4{
+    margin:0;
+}
+
+.hiddenPopUp{
+    display: none;
+}
+
+.popUp{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 0;
+    background-color: darkseagreen;
+    color: darkolivegreen;
+    animation-name: pop;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+@keyframes pop {
+    0% {bottom: -25px; height: fit-content;}
+    25% {bottom: 0; height: fit-content;}
+    50% {bottom: 0; height: fit-content;}
+    75% {bottom: 0; height: fit-content;}
+    100% {bottom: -25px; height: fit-content;}
+}
+/* deberia retocar eventualmente, cuando termina 
+    la animacion sigue quedando el span visible en un scroll,
+    deberia hacer algo con js, para que ademas 
+    "restablezca la animacion" asi se puede volver a reproducir si crean otro usuario*/
+    
+@media screen and (max-width:600px) {
+    #form{
+        height: 100%;
+        width: 200px;
+        display: grid;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2em;
+        padding: 5px;
+    }
+    input{
+        display: block;
+        max-width: min-content;
+    }
+}
+@media screen and (min-width:601px) {
+    #form{
+        position: absolute;
+        right: 15%;
+        margin-top: 2em;
+        padding: 10px;
+    }
+}
+@media screen and (min-width:992px) {
+    #form{
+        margin-right: auto;
+    }
+    .collectionSlideshow{
+        min-width: 770px;
+    }
+}

@@ -1,0 +1,82 @@
+header{
+	position:  fixed;
+}
+.content{
+    position: relative;
+    top: 49px;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 100%; 
+    grid-template-areas: 'last' 'main' 'main';
+    margin: 15px 25px;
+}
+.img2, .img3, .img4, .img5{
+    display: none;
+}
+#lastCollections, #friendsActivity{
+    padding:10px;
+    border-radius: 5px;
+    background-color: #ced9fa;
+}
+#lastCollections{
+    grid-area: last;
+}
+#lastCollections h3{
+    text-align: center;
+    margin:0;
+}
+#lcStyle{
+    margin: 25px 10px 0;
+    background-color: #dfe5f8;
+    border-radius: 5px;
+}
+#friendsActivity{
+    grid-area: main;
+}
+#sideContent{
+    margin-left: 25px;
+    grid-area: side;
+    display: none;
+}
+.infoPost{
+	color: blue;
+}
+.post img{
+    border-radius: 100%;
+}
+.post p{
+    margin-left: 50px;
+}
+
+@media screen and (max-width: 600px) {
+    .content{
+        margin:0;
+    }
+    .collectionsSlideshow{
+        min-width: auto !important;
+    } 
+}
+
+@media screen and (min-width: 601px){
+    .img2, .img3{
+        display: inline-block;
+    }
+    .collectionsSlideshow{
+        min-width: auto !important;
+    } 
+}
+
+@media screen and (min-width: 992px) {
+    .content{
+        grid-template-columns: 1fr 1fr 0.5fr;
+        grid-template-areas:    'last last side'
+                                'main main side'
+                                'main main side';
+    }
+    .img4, .img5{
+        display: inline-block;
+    }
+    #sideContent{
+        display: block;
+    }
+}

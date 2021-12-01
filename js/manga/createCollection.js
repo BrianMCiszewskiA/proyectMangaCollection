@@ -1,5 +1,6 @@
-function createCollection(series, cantVol, where, volHave, sFile){
+function createCollection(series, cantVol, where, sFile, status){
 	for(i=1; i<=cantVol; i++){
+		sType = status;
 		name = series + " " + i
 		if(!sFile){
 			sFile = sinCaracteresEspeciales(series);
@@ -9,8 +10,11 @@ function createCollection(series, cantVol, where, volHave, sFile){
 		if(cantVol == 1){
 			name = series;
 			imgName = file + ".jpg";
+			if(status == "F"){
+				sType = "O";
+			}
 		}
-		manga = new Manga(name, imgName, i, volHave.includes(i), series, sFile);
+		manga = new Manga(name, imgName, i, series, sFile, sType);
 		where.push(manga);
 	}
 }
@@ -22,7 +26,9 @@ function lowKeySnake(string){
 }
 function sinCaracteresEspeciales(s){
 	string = s +"";
-	console.log(s);
-	console.log(string);
 	return string.replace(/[^a-zA-Z0-9]/g, '');
+}
+
+function replaceSpace(string){
+	return string.replaceAll(" ", "_");
 }
